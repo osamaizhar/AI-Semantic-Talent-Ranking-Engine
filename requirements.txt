@@ -20,3 +20,6 @@ gensim
 spacy
 fasttext-wheel
 nltk
+groq
+requests
+python-dotenv
