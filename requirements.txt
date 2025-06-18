@@ -23,3 +23,6 @@ nltk
 groq
 requests
 python-dotenv
+sentence-transformers
+transformers
+torch
