@@ -25,4 +25,7 @@ requests
 python-dotenv
 sentence-transformers
 transformers
-torch
+# Use the official PyTorch CUDA wheel for GPU support (update CUDA version as needed)
+torch==2.3.0+cu121 --index-url https://download.pytorch.org/whl/cu121
+peft
+datasets
