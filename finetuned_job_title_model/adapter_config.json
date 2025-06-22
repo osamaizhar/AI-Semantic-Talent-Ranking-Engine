@@ -24,8 +24,8 @@
   "rank_pattern": {},
   "revision": null,
   "target_modules": [
-    "key",
     "attention.output.dense",
+    "key",
     "query",
     "value"
   ],
