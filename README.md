@@ -107,26 +107,6 @@ Based on my findings, I recommend:
 
 ## Getting Started
 
-### Requirements
-
-```
-pandas
-numpy
-matplotlib
-seaborn
-scikit-learn
-nltk
-sentence-transformers
-transformers
-torch
-peft
-fasttext-wheel
-gensim
-groq
-requests
-python-dotenv
-```
-
 ### Installation
 
 1. Clone the repository
