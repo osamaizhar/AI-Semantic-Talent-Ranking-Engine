@@ -2,9 +2,9 @@
 
 ## Project Background
 
-As a talent sourcing and management company, we face challenges in finding talented individuals for technology companies. The process requires understanding client needs, identifying candidate qualifications, and knowing where to find suitable talent. This labor-intensive process involves many manual operations.
+This project was done for a talent sourcing and management company, that faces challenges in finding talented individuals for technology companies. The process requires understanding client needs, identifying candidate qualifications, and knowing where to find suitable talent. This labor-intensive process involves many manual operations.
 
-Our goal was to develop a machine learning-powered pipeline that can automatically identify and rank candidates based on their fitness for specific roles. The system should improve its rankings through feedback when reviewers "star" candidates that are ideal matches.
+My goal was to develop a machine learning-powered pipeline that can automatically identify and rank candidates based on their fitness for specific roles. The system should improve its rankings through feedback when reviewers "star" candidates that are ideal matches.
 
 **H8ZdgkjygVUSOdtd**
 
@@ -18,6 +18,9 @@ This project was completed as part of my AI Residency at Apziva for a talent sou
 2. Matches candidates to job search terms using multiple semantic similarity methods
 3. Implements a fine-tuned embedding model for improved matching
 4. Provides re-ranking capabilities based on user feedback
+5. Integrates with Pinecone for upsertion and querying of data
+6. Uses a Finetuned LLM for candidate ranking and filtering
+
 
 ## Data Processing
 
@@ -25,15 +28,14 @@ The workflow uses two key datasets:
 - **et_data.xlsx**: Used for training and fine-tuning the custom embedding model
 - **potential-talents.xlsx**: Used for the initial workflow, testing, and demonstration
 
-The notebook automatically detects job title columns in both datasets and processes them for analysis and model training.
-
 ## Features
 
 - **Multiple Similarity Methods**: Implements and compares TF-IDF, Word2Vec, GloVe, FastText, SBERT, and custom fine-tuned models
 - **Semantic Matching**: Uses advanced NLP metrics (BLEU, METEOR, CIDEr) for job title matching
 - **Fine-tuned Embedding Model**: Custom-trained model based on sentence-transformers/all-MiniLM-L6-v2 with LoRA fine-tuning
 - **Interactive Re-ranking**: Allows users to "star" candidates to improve future rankings
-- **Performance Optimization**: Efficient implementation with caching for large datasets
+- **Pinecone Upsertion Pipeline RAG**: Upserts data to pinecone For RAG , refer to `upsert_pinecone_pipeline.ipynb`
+- **Pinecone Querying RAG**: Query Pinecone Data via cosine similarity and give user appropriate ranked candidates via Finetuned LLM refer to `pinecone_query_pipeline.ipynb`
 
 ## Technical Implementation
 
@@ -97,13 +99,6 @@ Based on my findings, I recommend:
 4. **Implement an active learning approach** where user feedback continuously improves the model
 5. **Consider adding more candidate features** beyond job titles for more robust matching
 
-## Future Improvements
-
-1. **Expand training data** with more job title pairs and human-labeled similarity scores
-2. **Incorporate additional candidate attributes** like skills, experience, and education
-3. **Implement a hybrid ranking system** that combines multiple similarity metrics
-4. **Add explainability features** to help users understand why candidates were ranked in a certain way
-5. **Develop an automated bias detection system** to ensure fair candidate evaluation
 
 ## Getting Started
 
@@ -112,7 +107,7 @@ Based on my findings, I recommend:
 1. Clone the repository
 2. Install dependencies: `pip install -r requirements.txt`
 3. Create a `.env` file with your API keys (Groq API for LLM integration)
-4. Run the `NLP_OPS.ipynb` notebook
+4. Run your desired notebook
 
 ### Usage
 
@@ -123,4 +118,10 @@ Based on my findings, I recommend:
 
 ## Conclusion
 
-This project, completed during my AI Residency at Apziva, successfully demonstrates how NLP techniques can automate and improve the talent matching process. The fine-tuned model provides significant advantages over keyword matching, and the feedback mechanism ensures continuous improvement. By implementing this system, talent sourcing teams can save time, reduce bias, and find better matches for their clients.
+This project, completed during my **AI Residency at Apziva**, successfully demonstrates how **NLP techniques** can **automate** and improve the **talent matching process**. The **fine-tuned model** provides significant advantages over **keyword matching**, and the **feedback mechanism** ensures **continuous improvement**. 
+
+By implementing this system, talent sourcing teams can:
+- Save significant time in **candidate screening**
+- Reduce **unconscious bias** in the selection process
+- Find better **matches** for their clients' specific needs
+- **Continuously improve** through an **active learning** approach
