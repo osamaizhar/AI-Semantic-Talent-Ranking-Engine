@@ -19,6 +19,7 @@ ipykernel
 lazypredict
 gensim
 spacy
+fasttext
 fasttext-wheel
 nltk
 groq
