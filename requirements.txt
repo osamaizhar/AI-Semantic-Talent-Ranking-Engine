@@ -2,6 +2,7 @@
 # Core data science libraries
 pandas
 numpy
+gradio
 matplotlib
 seaborn
 openpyxl
@@ -29,3 +30,10 @@ transformers
 torch==2.3.0+cu121 --index-url https://download.pytorch.org/whl/cu121
 peft
 datasets
+
+langchain
+langchain-text-splitters
+langchain_community
+transformers
+openai
+pinecone

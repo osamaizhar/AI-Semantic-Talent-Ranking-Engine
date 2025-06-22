@@ -1,5 +1,5 @@
 ---
-base_model: sentence-transformers/all-MiniLM-L6-v2
+base_model: bert-base-uncased
 library_name: peft
 ---
 

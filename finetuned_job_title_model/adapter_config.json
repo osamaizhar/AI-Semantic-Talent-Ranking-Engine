@@ -1,7 +1,7 @@
 {
   "alpha_pattern": {},
   "auto_mapping": null,
-  "base_model_name_or_path": "sentence-transformers/all-MiniLM-L6-v2",
+  "base_model_name_or_path": "bert-base-uncased",
   "bias": "none",
   "corda_config": null,
   "eva_config": null,
@@ -24,10 +24,10 @@
   "rank_pattern": {},
   "revision": null,
   "target_modules": [
-    "value",
-    "attention.output.dense",
     "key",
-    "query"
+    "attention.output.dense",
+    "query",
+    "value"
   ],
   "task_type": "FEATURE_EXTRACTION",
   "trainable_token_indices": null,
