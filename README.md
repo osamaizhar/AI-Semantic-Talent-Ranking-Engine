@@ -1,12 +1,12 @@
 # Talent Matching and Ranking System
-
+### **H8ZdgkjygVUSOdtd**
 ## Project Background
 
 This project was done for a talent sourcing and management company, that faces challenges in finding talented individuals for technology companies. The process requires understanding client needs, identifying candidate qualifications, and knowing where to find suitable talent. This labor-intensive process involves many manual operations.
 
 My goal was to develop a machine learning-powered pipeline that can automatically identify and rank candidates based on their fitness for specific roles. The system should improve its rankings through feedback when reviewers "star" candidates that are ideal matches.
 
-**H8ZdgkjygVUSOdtd**
+
 
 ## Project Overview
 
